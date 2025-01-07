@@ -8,13 +8,11 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-
-    /* Устанавливаем фоновое изображение для всей страницы */
-    background-image: url('your-background-image.jpg'); /* Путь к фоновому изображению */
-    background-size: cover; /* Покрыть весь экран */
+    background-image: url('your-background-image.jpg'); /* Замените на путь к своему изображению */
+    background-size: cover; /* Фон покроет весь экран */
     background-position: center; /* Центрирование фона */
-    background-attachment: fixed; /* Фон будет фиксированным */
-    min-height: 100vh; /* Убедитесь, что фон покрывает всю высоту страницы */
+    background-attachment: fixed; /* Фон фиксированный */
+    min-height: 100vh; /* Фон должен покрывать всю высоту страницы */
 }
 
 /* Навигационная панель */
@@ -46,7 +44,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция (без изображения) */
+/* Главная секция с текстом */
 .hero {
     display: flex;
     justify-content: center;
@@ -55,11 +53,12 @@ nav ul li a {
     color: white;
     text-align: center;
     position: relative;
-    z-index: 1; /* Снижаем z-index, чтобы текст был поверх фона */
+    z-index: 1; /* Текст будет поверх фона */
 }
 
 .hero-text h2 {
     font-size: 36px;
+    color: #f4a261; /* Цвет текста для лучшей видимости */
 }
 
 .hero-text p {
@@ -67,7 +66,7 @@ nav ul li a {
     margin-top: 20px;
 }
 
-/* Контент с каруселью */
+/* Контент с каруселью (Page 1) */
 .content {
     display: flex;
     justify-content: space-between;
@@ -78,11 +77,6 @@ nav ul li a {
 
 .text-section {
     width: 45%;
-}
-
-.text-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
 }
 
 .text-section p {
@@ -125,12 +119,14 @@ nav ul li a {
     animation: carousel-scroll 9s infinite;
 }
 
-/* Подвал */
+/* Подвал с "2024 Dohome" внизу страницы */
 footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для подвала */
     color: white;
-    position: relative;
-    z-index: 2; /* Позиционируем подвал поверх фона */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2; /* Подвал поверх фона */
 }
