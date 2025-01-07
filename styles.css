@@ -1,0 +1,129 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Навигационная панель */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Главная секция с изображением */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero img {
+    width: 60%;
+    border-radius: 10px; /* Немного закругляем края изображения */
+}
+
+.hero-text {
+    width: 35%;
+    padding-left: 20px;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Контент с каруселью */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.text-section {
+    width: 45%;
+}
+
+.text-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 18px;
+}
+
+.carousel {
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Плавная прокрутка карусели */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carousel-images {
+    animation: carousel-scroll 9s infinite;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
