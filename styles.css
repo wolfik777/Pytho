@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,20 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-image: url('your-background-image.jpg'); /* Путь к фоновому изображению */
+    background-size: cover; /* Покрыть весь экран */
+    background-position: center; /* Центрирование фона */
+    min-height: 100vh; /* Убедитесь, что фон покрывает всю страницу */
 }
 
 /* Навигационная панель */
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для панели */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: relative;
+    z-index: 2; /* Позиционируем панель поверх фона */
 }
 
 nav h1 {
@@ -43,16 +49,14 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-}
-
-.hero img {
-    width: 60%;
-    border-radius: 10px; /* Немного закругляем края изображения */
+    position: relative;
+    z-index: 1; /* Снижаем z-index, чтобы текст был поверх фона */
 }
 
 .hero-text {
     width: 35%;
     padding-left: 20px;
+    z-index: 2; /* Убедитесь, что текст всегда поверх фона */
 }
 
 .hero-text h2 {
@@ -69,6 +73,8 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    position: relative;
+    z-index: 1;
 }
 
 .text-section {
@@ -124,6 +130,8 @@ nav ul li a {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для подвала */
     color: white;
+    position: relative;
+    z-index: 2; /* Позиционируем подвал поверх фона */
 }
