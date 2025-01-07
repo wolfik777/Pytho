@@ -44,7 +44,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция с текстом */
+/* Главная секция с фоном */
 .hero {
     display: flex;
     justify-content: center;
@@ -66,13 +66,14 @@ nav ul li a {
     margin-top: 20px;
 }
 
-/* Контент с каруселью (Page 1) */
+/* Контент с текстом и каруселью (Page 1) */
 .content {
     display: flex;
     justify-content: space-between;
     padding: 50px;
     position: relative;
     z-index: 1;
+    margin-top: 50px; /* Оставляем отступ сверху, чтобы контент не был впритык */
 }
 
 .text-section {
@@ -129,4 +130,14 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 2; /* Подвал поверх фона */
+}
+
+/* Прокрутка вниз */
+html, body {
+    height: 100%;
+}
+
+#page1, #page2 {
+    min-height: 100vh;
+    padding: 50px;
 }
