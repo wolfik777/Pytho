@@ -41,7 +41,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция с изображением (первая картинка) */
+/* Главная секция с фоном (первая картинка) */
 .hero {
     position: relative;
     text-align: center;
@@ -84,6 +84,7 @@ nav ul li a {
     overflow: hidden;
     position: relative;
     margin-top: 30px;
+    height: 400px; /* Устанавливаем высоту карусели */
 }
 
 .carousel-images {
@@ -92,10 +93,10 @@ nav ul li a {
 }
 
 .carousel-item {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Устанавливаем фиксированную ширину */
+    height: 100%; /* Устанавливаем высоту карусели */
+    object-fit: contain; /* Сохраняем пропорции изображений */
     margin-right: 10px;
-    border-radius: 10px;
 }
 
 /* Кнопки для карусели */
