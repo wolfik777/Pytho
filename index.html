@@ -30,20 +30,30 @@
     <section id="page2" class="content">
         <div class="carousel">
             <div class="carousel-images">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
+                <img src="image1.jpg" alt="Image 1" class="carousel-item">
+                <img src="image2.jpg" alt="Image 2" class="carousel-item">
+                <img src="image3.jpg" alt="Image 3" class="carousel-item">
+                <img src="image4.jpg" alt="Image 4" class="carousel-item">
             </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
         <div class="text-section">
             <p>Это текст о компании или сайте. Здесь можно описать, что ваш сайт предлагает пользователю.</p>
         </div>
     </section>
 
+    <!-- Модальное окно для просмотра изображения -->
+    <div id="modal" class="modal">
+        <span id="close" class="close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
     <!-- Подвал с "2024 Dohome" внизу страницы -->
     <footer>
         <p>&copy; 2024 Dohome</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
