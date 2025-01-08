@@ -49,19 +49,13 @@ nav ul li a {
 }
 
 .hero-text h2 {
-    font-size: 28px;
+    font-size: 28px; /* Уменьшаем размер текста */
     color: #f4a261; /* Цвет текста для лучшей видимости */
     margin-top: 20px;
-    padding-top: 20px; /* Отступ сверху */
     position: absolute;
-    top: 10%;
+    top: 10%; /* Сдвигаем вверх */
     left: 50%;
     transform: translateX(-50%);
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-top: 20px;
 }
 
 /* Контент с текстом и каруселью (Page 2) */
@@ -70,11 +64,10 @@ nav ul li a {
     justify-content: space-between;
     padding: 50px;
     margin-top: 50px;
-    flex-direction: row; /* Размещение по горизонтали */
 }
 
 .text-section {
-    width: 40%; /* Текстовый блок справа */
+    width: 45%; /* Текстовый блок слева */
     font-size: 18px;
     text-align: left; /* Текст слева */
 }
@@ -84,43 +77,41 @@ nav ul li a {
 }
 
 .carousel {
-    width: 55%;
+    width: 45%; /* Карусель справа */
     overflow: hidden;
     position: relative;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 4s ease; /* Замедление прокрутки */
+    transition: transform 6s ease; /* Замедленная прокрутка */
 }
 
 .carousel-images img {
-    width: 135px; /* Устанавливаем размер изображений */
-    height: 200px; /* Устанавливаем размер изображений */
+    width: 200px; /* Устанавливаем фиксированный размер изображений */
+    height: 300px; /* Устанавливаем фиксированный размер изображений */
     margin-right: 10px; /* Отступы между изображениями */
     border-radius: 10px;
 }
 
-.carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+/* Плавная прокрутка карусели */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.carousel-images {
+    animation: carousel-scroll 18s infinite; /* Медленная прокрутка */
 }
 
 /* Подвал с "2024 Dohome" внизу страницы */
