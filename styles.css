@@ -298,7 +298,7 @@ button:hover {
 /* Страница для кнопок связи */
 #page5 {
     background-color: #f4f4f4;
-    padding: 50px 0;
+    padding: 50px 100;
     display: flex;
     flex-direction: column; /* Выстраиваем элементы по вертикали */
     align-items: center; /* Центрируем контент */
@@ -339,7 +339,7 @@ button {
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    width: 250px; /* Ограничим ширину кнопок */
+    width: 150px; /* Ограничим ширину кнопок */
 }
 
 button:hover {
@@ -351,6 +351,7 @@ button:hover {
     background-color: #2a9d8f; /* Зеленая кнопка для звонка */
     border-radius: 12px; /* Закругленные углы */
     font-weight: bold; /* Сделать текст жирным */
+    width: 250px;
 }
 
 .call-button:hover {
