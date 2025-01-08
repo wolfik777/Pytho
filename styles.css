@@ -292,6 +292,58 @@ button:hover {
     line-height: 1.6;
 }
 
+/* Страница для кнопок связи */
+#page5 {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: #f4a261; /* Оранжевый цвет для кнопок */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0762f; /* Темный оттенок оранжевого при наведении */
+}
+
+/* Индивидуальные стили для каждой кнопки */
+.call-button {
+    background-color: #2a9d8f; /* Зеленая кнопка для звонка */
+}
+
+.call-button:hover {
+    background-color: #21867c;
+}
+
+.avito-button {
+    background-color: #264653; /* Цвет кнопки для Авито */
+}
+
+.avito-button:hover {
+    background-color: #1d3d4a;
+}
+
+
 
 
 /* Мобильная версия */
