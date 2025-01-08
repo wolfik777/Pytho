@@ -93,6 +93,7 @@ nav ul li a {
     height: auto;
     margin-right: 10px;
     border-radius: 10px;
+    object-fit: contain;
 }
 
 /* Кнопки для карусели */
