@@ -52,6 +52,7 @@ nav ul li a {
     font-size: 36px;
     color: #f4a261; /* Цвет текста для лучшей видимости */
     text-align: center;
+    margin-top: 20px;
 }
 
 .hero-text p {
@@ -59,7 +60,7 @@ nav ul li a {
     margin-top: 20px;
 }
 
-/* Контент с текстом и каруселью (Page 1) */
+/* Контент с текстом и каруселью (Page 2) */
 .content {
     display: flex;
     justify-content: space-between;
@@ -71,6 +72,7 @@ nav ul li a {
 .text-section {
     width: 100%;
     text-align: center; /* Центрируем текст */
+    margin-top: 20px;
 }
 
 .text-section p {
@@ -141,6 +143,8 @@ html, body {
 #page1, #page2 {
     min-height: 100vh;
     padding: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Мобильные устройства */
@@ -151,5 +155,9 @@ html, body {
 
     .text-section p {
         font-size: 16px; /* Меньший текст для мобильных */
+    }
+
+    .content {
+        flex-direction: column; /* На мобильных устройствах контент будет в колонку */
     }
 }
