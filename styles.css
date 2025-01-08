@@ -8,11 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-image: url('your-background-image.jpg'); /* Замените на путь к своему изображению */
-    background-size: cover; /* Фон покроет весь экран */
-    background-position: center; /* Центрирование фона */
-    background-attachment: fixed; /* Фон фиксированный */
-    min-height: 100vh; /* Фон должен покрывать всю высоту страницы */
+    background-color: #f0f0f0;
+    min-height: 100vh;
 }
 
 /* Навигационная панель */
@@ -44,25 +41,35 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция с фоном */
+/* Главная секция с изображением (первая картинка) */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    color: white;
-    text-align: center;
     position: relative;
-    z-index: 1; /* Текст будет поверх фона */
+    text-align: center;
+    height: 100vh; /* Вся высота экрана */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%; /* Сделаем картинку, которая заполняет весь экран */
+    object-fit: cover; /* Обеспечивает, что картинка будет покрывать экран */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
 }
 
 .hero-text h2 {
-    font-size: 36px;
-    color: #f4a261; /* Цвет текста для лучшей видимости */
+    font-size: 48px;
+    color: #f4a261; /* Цвет текста */
 }
 
 .hero-text p {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
@@ -71,9 +78,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     padding: 50px;
-    position: relative;
-    z-index: 1;
-    margin-top: 50px; /* Оставляем отступ сверху, чтобы контент не был впритык */
+    margin-top: 50px;
 }
 
 .text-section {
@@ -129,7 +134,12 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 2; /* Подвал поверх фона */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 /* Прокрутка вниз */
