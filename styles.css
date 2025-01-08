@@ -203,6 +203,41 @@ button:hover {
     color: #555;
 }
 
+/* Стили для новой страницы */
+#page3 {
+    background-color: #f4f4f4; /* Легкий серый фон */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.image-section {
+    margin-bottom: 30px;
+}
+
+.background-image {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.text-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+
 /* Мобильная версия */
 @media (max-width: 768px) {
     .content {
