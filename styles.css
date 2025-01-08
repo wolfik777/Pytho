@@ -49,10 +49,14 @@ nav ul li a {
 }
 
 .hero-text h2 {
-    font-size: 36px;
+    font-size: 28px;
     color: #f4a261; /* Цвет текста для лучшей видимости */
-    text-align: center;
     margin-top: 20px;
+    padding-top: 20px; /* Отступ сверху */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero-text p {
@@ -66,13 +70,13 @@ nav ul li a {
     justify-content: space-between;
     padding: 50px;
     margin-top: 50px;
-    flex-direction: column;
+    flex-direction: row; /* Размещение по горизонтали */
 }
 
 .text-section {
-    width: 100%;
-    text-align: center; /* Центрируем текст */
-    margin-top: 20px;
+    width: 40%; /* Текстовый блок справа */
+    font-size: 18px;
+    text-align: left; /* Текст слева */
 }
 
 .text-section p {
@@ -80,10 +84,9 @@ nav ul li a {
 }
 
 .carousel {
-    width: 100%;
+    width: 55%;
     overflow: hidden;
     position: relative;
-    margin-top: 30px;
 }
 
 .carousel-images {
@@ -92,8 +95,32 @@ nav ul li a {
 }
 
 .carousel-images img {
-    width: 100%;
+    width: 135px; /* Устанавливаем размер изображений */
+    height: 200px; /* Устанавливаем размер изображений */
+    margin-right: 10px; /* Отступы между изображениями */
     border-radius: 10px;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Плавная прокрутка карусели */
@@ -143,14 +170,12 @@ html, body {
 #page1, #page2 {
     min-height: 100vh;
     padding: 50px;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Мобильные устройства */
 @media (max-width: 768px) {
     .hero-text h2 {
-        font-size: 28px; /* Меньший размер заголовка для мобильных */
+        font-size: 22px; /* Меньший размер заголовка для мобильных */
     }
 
     .text-section p {
@@ -159,5 +184,11 @@ html, body {
 
     .content {
         flex-direction: column; /* На мобильных устройствах контент будет в колонку */
+        align-items: center;
+    }
+
+    .carousel {
+        width: 100%;
+        margin-top: 30px;
     }
 }
