@@ -81,6 +81,7 @@ nav ul li a {
     width: 100%;
     overflow: hidden;
     border-radius: 10px; /* Скругленные края для карусели */
+    transition: transform 0.5s ease; /* Плавное переключение изображений */
 }
 
 .carousel-item {
