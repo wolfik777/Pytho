@@ -46,7 +46,7 @@ nav ul li a {
     position: relative;
     text-align: center;
     height: 100vh; /* Вся высота экрана */
-    background-image: url('your-image.jpg'); /* Путь к фоновому изображению */
+    background-image: url('your-background-image.jpg'); /* Путь к фоновому изображению */
     background-size: cover;
     background-position: center;
 }
