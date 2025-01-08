@@ -41,34 +41,35 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция с изображением (первая картинка) */
+/* Главная секция с фоном (первая картинка) */
 .hero {
     position: relative;
     text-align: center;
     height: 100vh; /* Вся высота экрана */
+    background-image: url('your-image.jpg'); /* Путь к фоновому изображению */
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-text h2 {
-    font-size: 28px; /* Уменьшаем размер текста */
-    color: #f4a261; /* Цвет текста для лучшей видимости */
+    font-size: 28px;
+    color: white;
     margin-top: 20px;
     position: absolute;
-    top: 10%; /* Сдвигаем вверх */
+    top: 50%; /* Сдвигаем в центр */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
 }
 
-/* Контент с текстом и каруселью (Page 2) */
+/* Следующий раздел с текстом и белым фоном */
 .content {
-    display: flex;
-    justify-content: space-between;
+    background-color: white;
     padding: 50px;
-    margin-top: 50px;
-    flex-direction: row; /* Размещение по горизонтали */
+    min-height: 100vh;
 }
 
 .text-section {
-    width: 45%; /* Текстовый блок справа */
+    width: 100%; /* Текстовый блок */
     font-size: 18px;
     text-align: left; /* Текст слева */
 }
@@ -78,14 +79,15 @@ nav ul li a {
 }
 
 .carousel {
-    width: 45%; /* Карусель слева */
+    width: 100%; /* Карусель под текстом */
     overflow: hidden;
     position: relative;
+    margin-top: 30px;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 1s ease; /* Медленная прокрутка */
+    transition: transform 1s ease;
 }
 
 .carousel-item {
@@ -93,64 +95,26 @@ nav ul li a {
     height: auto;
     margin-right: 10px;
     border-radius: 10px;
-    object-fit: contain;
 }
 
-/* Кнопки для карусели */
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+/* Плавная прокрутка карусели */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-/* Модальное окно для просмотра изображения */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 60px;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-#close {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #f1f1f1;
-    cursor: pointer;
+.carousel-images {
+    animation: carousel-scroll 24s infinite; /* Медленная прокрутка */
 }
 
 /* Подвал с "2024 Dohome" внизу страницы */
