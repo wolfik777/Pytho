@@ -64,12 +64,14 @@ nav ul li a {
     justify-content: space-between;
     padding: 50px;
     margin-top: 50px;
+    flex-direction: column; /* Изменяем направление на колонку */
 }
 
 .text-section {
-    width: 45%; /* Текстовый блок слева */
+    width: 100%; /* Текстовый блок сверху */
     font-size: 18px;
     text-align: left; /* Текст слева */
+    margin-top: 20px;
 }
 
 .text-section p {
@@ -77,9 +79,10 @@ nav ul li a {
 }
 
 .carousel {
-    width: 45%; /* Карусель справа */
+    width: 100%; /* Карусель под текстом */
     overflow: hidden;
     position: relative;
+    margin-top: 30px;
 }
 
 .carousel-images {
@@ -88,8 +91,8 @@ nav ul li a {
 }
 
 .carousel-images img {
-    width: 200px; /* Устанавливаем фиксированный размер изображений */
-    height: 300px; /* Устанавливаем фиксированный размер изображений */
+    width: auto; /* Изображения не растягиваются */
+    height: 300px; /* Размер изображения по высоте */
     margin-right: 10px; /* Отступы между изображениями */
     border-radius: 10px;
 }
