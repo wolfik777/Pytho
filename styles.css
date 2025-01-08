@@ -91,7 +91,7 @@ nav ul li a {
 
 .carousel-images {
     display: flex;
-    transition: transform 1s ease;
+    transition: transform 4s ease; /* Замедление прокрутки */
 }
 
 .carousel-images img {
@@ -121,26 +121,6 @@ button {
 
 button:hover {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Плавная прокрутка карусели */
-@keyframes carousel-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-100%);
-    }
-    66% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.carousel-images {
-    animation: carousel-scroll 9s infinite;
 }
 
 /* Подвал с "2024 Dohome" внизу страницы */
