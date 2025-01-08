@@ -53,7 +53,7 @@ nav ul li a {
 
 .hero-text h2 {
     font-size: 28px;
-    color: white;
+    color: #f4a261; /* Оранжевый цвет */
     margin-top: 20px;
     position: absolute;
     top: 10%; /* Сдвигаем вверх */
@@ -63,32 +63,32 @@ nav ul li a {
 
 /* Следующий раздел с белым фоном и каруселью */
 .content {
-    background-color: white;
+    display: flex;
+    justify-content: center;
     padding: 50px;
+    background-color: white;
     min-height: 100vh;
 }
 
 .carousel {
-    width: 100%; /* Карусель под текстом */
-    overflow: hidden;
     position: relative;
-    margin-top: 30px;
-    height: 400px; /* Устанавливаем высоту карусели */
+    width: 60%;
+    margin-right: 20px;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 1s ease;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Скругленные края для карусели */
 }
 
 .carousel-item {
-    width: 100%; /* Устанавливаем фиксированную ширину */
-    height: 100%; /* Устанавливаем высоту карусели */
-    object-fit: contain; /* Сохраняем пропорции изображений */
-    margin-right: 10px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Сохраняем пропорции изображений */
 }
 
-/* Кнопки для карусели */
 button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -107,16 +107,52 @@ button:hover {
 }
 
 .prev {
-    left: 0;
+    left: 10px;
 }
 
 .next {
-    right: 0;
+    right: 10px;
+}
+
+.text-section {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Модальное окно для просмотра изображения */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#close {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    cursor: pointer;
 }
 
 /* Секция "Про спорт" */
 .sports {
-    background-color: #f4f4f4; /* Легкий серый фон для секции */
+    background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
 }
@@ -139,14 +175,14 @@ button:hover {
 }
 
 .sport-item:nth-child(odd) {
-    flex-direction: row-reverse; /* Меняем порядок изображений и текста для чередования */
+    flex-direction: row-reverse;
 }
 
 .sport-image img {
     width: 300px;
     height: auto;
     border-radius: 8px;
-    margin-right: 20px; /* Отступ между изображением и текстом */
+    margin-right: 20px;
 }
 
 .sport-text {
@@ -157,7 +193,7 @@ button:hover {
 .sport-text h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #f4a261; /* Оранжевый цвет для заголовка */
+    color: #f4a261;
 }
 
 .sport-text p {
@@ -167,15 +203,20 @@ button:hover {
 
 /* Мобильная версия */
 @media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        width: 80%;
+    }
+
     .sport-item {
         flex-direction: column;
     }
 
     .sport-image img {
-        width: 80%; /* Для мобильных устройств изображения становятся меньше */
-    }
-
-    .sport-text h3 {
-        font-size: 22px; /* Меньший размер заголовка */
+        width: 80%;
     }
 }
