@@ -64,14 +64,13 @@ nav ul li a {
     justify-content: space-between;
     padding: 50px;
     margin-top: 50px;
-    flex-direction: column; /* Изменяем направление на колонку */
+    flex-direction: row; /* Размещение по горизонтали */
 }
 
 .text-section {
-    width: 100%; /* Текстовый блок сверху */
+    width: 45%; /* Текстовый блок справа */
     font-size: 18px;
     text-align: left; /* Текст слева */
-    margin-top: 20px;
 }
 
 .text-section p {
@@ -79,21 +78,19 @@ nav ul li a {
 }
 
 .carousel {
-    width: 100%; /* Карусель под текстом */
+    width: 45%; /* Карусель слева */
     overflow: hidden;
     position: relative;
-    margin-top: 30px;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 6s ease; /* Замедленная прокрутка */
+    transition: transform 8s ease; /* Замедленная прокрутка */
 }
 
 .carousel-images img {
-    width: auto; /* Изображения не растягиваются */
-    height: 300px; /* Размер изображения по высоте */
-    margin-right: 10px; /* Отступы между изображениями */
+    width: 100%; /* Устанавливаем размер изображений */
+    height: auto; /* Изображения не растягиваются */
     border-radius: 10px;
 }
 
@@ -114,7 +111,7 @@ nav ul li a {
 }
 
 .carousel-images {
-    animation: carousel-scroll 18s infinite; /* Медленная прокрутка */
+    animation: carousel-scroll 24s infinite; /* Медленная прокрутка */
 }
 
 /* Подвал с "2024 Dohome" внизу страницы */
