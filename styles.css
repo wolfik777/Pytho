@@ -41,7 +41,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Главная секция с фоном (первая картинка) */
+/* Главная секция с изображением (первая картинка) */
 .hero {
     position: relative;
     text-align: center;
@@ -61,147 +61,68 @@ nav ul li a {
     transform: translateX(-50%);
 }
 
-/* Следующий раздел с текстом и белым фоном */
-.content {
-    background-color: white;
-    padding: 50px;
-    min-height: 100vh;
-}
-
-.text-section {
-    width: 100%; /* Текстовый блок */
-    font-size: 18px;
-    text-align: left; /* Текст слева */
-    margin-top: 20px;
-}
-
-.text-section p {
-    font-size: 18px;
-}
-
-.carousel {
-    width: 100%; /* Карусель под текстом */
-    overflow: hidden;
-    position: relative;
-    margin-top: 30px;
-    height: 400px; /* Устанавливаем высоту карусели */
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 1s ease;
-}
-
-.carousel-item {
-    width: 100%; /* Устанавливаем фиксированную ширину */
-    height: 100%; /* Устанавливаем высоту карусели */
-    object-fit: contain; /* Сохраняем пропорции изображений */
-    margin-right: 10px;
-}
-
-/* Кнопки для карусели */
-button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-/* Модальное окно для просмотра изображения */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 60px;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-#close {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #f1f1f1;
-    cursor: pointer;
-}
-
-/* Подвал с "2024 Dohome" внизу страницы */
-footer {
+/* Секция "Про спорт" */
+.sports {
+    background-color: #f4f4f4; /* Легкий серый фон для секции */
+    padding: 50px 0;
     text-align: center;
+}
+
+.sports h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.sport-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 10px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для подвала */
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Кнопки перехода на Page 1 и Page 2 */
-footer a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+.sport-item:nth-child(odd) {
+    flex-direction: row-reverse; /* Меняем порядок изображений и текста для чередования */
 }
 
-/* Прокрутка вниз */
-html, body {
-    height: 100%;
+.sport-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Отступ между изображением и текстом */
 }
 
-#page1, #page2 {
-    min-height: 100vh;
-    padding: 50px;
+.sport-text {
+    max-width: 500px;
+    text-align: left;
 }
 
-/* Мобильные устройства */
+.sport-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f4a261; /* Оранжевый цвет для заголовка */
+}
+
+.sport-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Мобильная версия */
 @media (max-width: 768px) {
-    .hero-text h2 {
-        font-size: 22px; /* Меньший размер заголовка для мобильных */
+    .sport-item {
+        flex-direction: column;
     }
 
-    .text-section p {
-        font-size: 16px; /* Меньший текст для мобильных */
+    .sport-image img {
+        width: 80%; /* Для мобильных устройств изображения становятся меньше */
     }
 
-    .content {
-        flex-direction: column; /* На мобильных устройствах контент будет в колонку */
-        align-items: center;
-    }
-
-    .carousel {
-        width: 100%;
-        margin-top: 30px;
+    .sport-text h3 {
+        font-size: 22px; /* Меньший размер заголовка */
     }
 }
