@@ -22,32 +22,41 @@
     <!-- Главная секция с фоном (первая картинка) -->
     <section class="hero">
         <div class="hero-text">
-            <h2>Добро пожаловать в Духов</h2> <!-- Текст на русском -->
+            <h2>Добро пожаловать в Духов</h2>
         </div>
     </section>
 
-    <!-- Следующий раздел с белым фоном -->
-    <section id="page2" class="content">
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="image1.jpg" alt="Image 1" class="carousel-item">
-                <img src="image2.jpg" alt="Image 2" class="carousel-item">
-                <img src="image3.jpg" alt="Image 3" class="carousel-item">
-                <img src="image4.jpg" alt="Image 4" class="carousel-item">
+    <!-- Секция "Про спорт" -->
+    <section class="sports">
+        <h2>Про спорт</h2>
+        <div class="sport-item">
+            <div class="sport-image">
+                <img src="kiteboarding.jpg" alt="Кайтинг">
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+            <div class="sport-text">
+                <h3>Кайтинг</h3>
+                <p>Кайтинг — это водный вид спорта, в котором используется воздушный змей для передвижения по воде на специальном борде.</p>
+            </div>
         </div>
-        <div class="text-section">
-            <p>Это текст о компании или сайте. Здесь можно описать, что ваш сайт предлагает пользователю.</p>
+        <div class="sport-item">
+            <div class="sport-image">
+                <img src="wakeboarding.jpg" alt="Вейкбординг">
+            </div>
+            <div class="sport-text">
+                <h3>Вейкбординг</h3>
+                <p>Вейкбординг — это вид спорта, где спортсмен катится по воде на доске, держа в руках канат, прикрепленный к катеру или буксировочному средству.</p>
+            </div>
+        </div>
+        <div class="sport-item">
+            <div class="sport-image">
+                <img src="supboarding.jpg" alt="Сапбординг">
+            </div>
+            <div class="sport-text">
+                <h3>Сапбординг</h3>
+                <p>Сапбординг — это активный вид спорта, который совмещает элементы серфинга и гребли на доске, стоя на ней и управляя гребцом.</p>
+            </div>
         </div>
     </section>
-
-    <!-- Модальное окно для просмотра изображения -->
-    <div id="modal" class="modal">
-        <span id="close" class="close-btn">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
 
     <!-- Подвал с "2024 Dohome" внизу страницы -->
     <footer>
@@ -55,5 +64,6 @@
     </footer>
 
     <script src="scripts.js"></script>
+
 </body>
 </html>
