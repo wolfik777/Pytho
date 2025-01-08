@@ -61,6 +61,161 @@ nav ul li a {
     transform: translateX(-50%);
 }
 
+/* Сброс стилей по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Белый фон для всей страницы */
+    min-height: 100vh;
+}
+
+/* Навигационная панель */
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для панели */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+nav h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Главная секция с изображением (первая картинка) */
+/* Главная секция с фоном (первая картинка) */
+.hero {
+    position: relative;
+    text-align: center;
+@@ -84,6 +84,7 @@
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    height: 400px; /* Устанавливаем высоту карусели */
+}
+
+.carousel-images {
+@@ -92,115 +93,115 @@
+}
+
+.carousel-item {
+    width: 100%;
+    height: auto;
+    width: 100%; /* Устанавливаем фиксированную ширину */
+    height: 100%; /* Устанавливаем высоту карусели */
+    object-fit: contain; /* Сохраняем пропорции изображений */
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Кнопки для карусели */
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Модальное окно для просмотра изображения */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#close {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Подвал с "2024 Dohome" внизу страницы */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для подвала */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Кнопки перехода на Page 1 и Page 2 */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Прокрутка вниз */
+html, body {
+    height: 100%;
+}
+
+#page1, #page2 {
+    min-height: 100vh;
+    padding: 50px;
+}
+
 /* Секция "Про спорт" */
 .sports {
     background-color: #f4f4f4; /* Легкий серый фон для секции */
@@ -112,6 +267,27 @@ nav ul li a {
     color: #555;
 }
 
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 22px; /* Меньший размер заголовка для мобильных */
+    }
+
+    .text-section p {
+        font-size: 16px; /* Меньший текст для мобильных */
+    }
+
+    .content {
+        flex-direction: column; /* На мобильных устройствах контент будет в колонку */
+        align-items: center;
+    }
+
+    .carousel {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
 /* Мобильная версия */
 @media (max-width: 768px) {
     .sport-item {
