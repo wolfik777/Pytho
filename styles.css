@@ -294,15 +294,23 @@ button:hover {
 
 /* Страница для кнопок связи */
 /* Страница для кнопок связи */
+/* Страница для кнопок связи */
 #page5 {
     background-color: #f4f4f4;
     padding: 50px 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Сначала контент, а потом кнопки */
+    align-items: center;
+    min-height: 100vh; /* Чтобы секция занимала всю высоту экрана */
 }
 
+/* Контейнер для текста и кнопок */
 .contact-section {
-    max-width: 600px;
-    margin: 0 auto; /* Центрируем контейнер */
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина секции */
+    text-align: center;
+    margin-bottom: 30px; /* Отступ снизу для раздела */
 }
 
 .contact-section h2 {
@@ -311,11 +319,12 @@ button:hover {
     color: #333;
 }
 
+/* Контейнер для кнопок */
 .contact-buttons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px; /* Отступ сверху от текста */
+    flex-direction: column; /* Располагаем кнопки вертикально */
+    align-items: center; /* Центрируем кнопки */
+    gap: 20px; /* Отступы между кнопками */
 }
 
 /* Кнопки */
@@ -328,6 +337,7 @@ button {
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    width: 250px; /* Ограничим ширину кнопок */
 }
 
 button:hover {
