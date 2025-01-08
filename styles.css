@@ -294,9 +294,14 @@ button:hover {
 
 /* Страница для кнопок связи */
 #page5 {
-    background-color: #f4f4f4;
+     background-color: #f4f4f4;
     padding: 50px 0;
     text-align: center;
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по нижней части */
+    flex-direction: column;
+    min-height: 100vh; /* Убедиться, что секция растягивается на весь экран */
+    align-items: center; /* Центрирование кнопок */
 }
 
 .contact-section h2 {
