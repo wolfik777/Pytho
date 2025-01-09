@@ -321,8 +321,8 @@ button:hover {
 }
 
 /* Контейнер для кнопок */
-.contact-buttons {
-    display: flex;
+.contact-button {
+    position: relative;
     flex-direction: column; /* Располагаем кнопки вертикально */
     align-items: center; /* Центрируем кнопки */
     gap: 20px; /* Отступы между кнопками */
