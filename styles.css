@@ -350,7 +350,7 @@ button:hover {
     background-color: #2a9d8f; /* Зеленая кнопка для звонка */
     border-radius: 12px; /* Закругленные углы */
     font-weight: bold; /* Сделать текст жирным */
-    width: 250px;
+    position: relative;
 }
 
 .call-button:hover {
@@ -361,6 +361,7 @@ button:hover {
     background-color: #264653; /* Цвет кнопки для Авито */
     border-radius: 12px;
     font-weight: bold;
+    position: relative;
 }
 
 .avito-button:hover {
